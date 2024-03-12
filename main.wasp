@@ -1,0 +1,14 @@
+app starsCounter {
+  wasp: {
+    version: "^0.12.2"
+  },
+  title: "starsCounter",
+  db: {
+    system: PostgreSQL,
+  }
+}
+
+route RootRoute { path: "/", to: MainPage }
+page MainPage {
+  component: import { MainPage } from "@src/MainPage"
+}
